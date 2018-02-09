@@ -87,13 +87,11 @@ jobs:
 
 #     test cypress
     - stage: cypress-tests
-      env: URL=http://localhost:3000/
       before_script:
-      - npm run build:dynamic
-      - node  ./demo/dist/server.js &
+      - ng serve &
       - sleep 3
       script:
-      - CYPRESS_baseUrl=$URL npm run cy:run -- --config videoRecording=false
+      - npm run cy:run
 
 #    check prod build
     - &build
