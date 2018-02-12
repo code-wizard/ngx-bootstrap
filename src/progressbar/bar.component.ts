@@ -26,7 +26,7 @@ import { isBs3 } from '../utils/theme-provider';
     '[attr.aria-valuetext]': 'percent ? percent.toFixed(0) + "%" : ""',
     '[attr.aria-valuemax]': 'max',
     '[style.height.%]': '"100"',
-    '[style.background-color]':backgroundColor
+    '[style.background-color]':'backgroundColor'
   }
 })
 export class BarComponent implements OnInit, OnDestroy {
