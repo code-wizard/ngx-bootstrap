@@ -25,7 +25,8 @@ import { isBs3 } from '../utils/theme-provider';
     '[attr.aria-valuenow]': 'value',
     '[attr.aria-valuetext]': 'percent ? percent.toFixed(0) + "%" : ""',
     '[attr.aria-valuemax]': 'max',
-    '[style.height.%]': '"100"'
+    '[style.height.%]': '"100"',
+    '[style.background-color]':backgroundColor
   }
 })
 export class BarComponent implements OnInit, OnDestroy {
@@ -33,6 +34,7 @@ export class BarComponent implements OnInit, OnDestroy {
 
   /** provide one of the four supported contextual classes: `success`, `info`, `warning`, `danger` */
   @Input() type: string;
+  @Input() backgroundColor:string;
 
   /** current value of progress bar */
   @Input()
